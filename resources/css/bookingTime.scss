@@ -1,0 +1,176 @@
+/*! *****************************************
+/*    css
+/*    V 2020.11.08
+/*
+/******************************************/
+.page_main {
+    max-width: 700px;
+    margin: auto;
+}
+
+.day-schedule {
+    position: relative;
+    max-height: 450px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s cubic-bezier(0.12, 0.49, 0.17, 0.87);
+    transition: all 0.3s cubic-bezier(0.12, 0.49, 0.17, 0.87);
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.day-schedule.js-open {
+    max-height: 1500px;
+    padding-bottom: 50px;
+}
+
+.day-schedule.js-open .day-schedule-ctrl .svg_icon {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.day-schedule-ctrl {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.day-schedule-ctrl .svg_icon {
+    position: relative;
+    z-index: 10;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.day-schedule-ctrl:hover .svg_icon {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.day-schedule-submit {
+    display: table;
+    margin: auto;
+    background-color: #ed6d3c;
+    border: none;
+    padding: 8px 24px;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.day-schedule-submit:hover {
+    background-color: #e14d15;
+}
+
+.day-schedule-selector {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+}
+
+.schedule-days {
+    text-align: center;
+    font-weight: bold;
+
+    @media (max-width:414px) {
+        font-size: 12px;
+    }
+
+}
+
+ul.schedule-days-time {
+    list-style: none;
+    padding: 0.8rem 0;
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    zoom: 1;
+}
+
+ul.schedule-days-time:before,
+ul.schedule-days-time:after {
+    content: "";
+    display: table;
+    height: 0;
+    overflow: hidden;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+ul.schedule-days-time:after {
+    clear: both;
+}
+
+.time-slot {
+    padding: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #cecece;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.time-slot:hover {
+    background-color: #e0e0e0;
+}
+
+.time-slot[data-selected],
+.time-slot[data-selecting] {
+    color: #4abdac;
+    opacity: 1 !important;
+}
+
+.time-slot[data-selecting] {
+    background-color: #efefef;
+}
+
+.time-slot[data-disabled] {
+    opacity: 0.55;
+    cursor: no-drop;
+}
+
+.time-slot[data-disabled]:hover {
+    background-color: transparent;
+}
+
+.time-slot.js-beforeSelected {
+    background-color: #FFB723;
+    color: white;
+}
+
+.time-slot.js-stdSelected {
+    background-color: #FFB723;
+    color: white;
+}
+
+.time-slot.js-stdChanged {
+    background-color: #ED6D3C;
+    color: white;
+}
+
+.number-under-chinese {
+    border-bottom: solid 3px #ED6D3C;
+    width: 50px;
+    margin: auto;
+    color: #4ABDAC;
+    padding-bottom: 4px;
+}
+
+/*# sourceMappingURL=style.css.map */
